@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    /*background-color: #edf0f2;*/
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out the buttons */
+    width: 200px;
+    height: 100vh;
+    border-radius: 2px;
+    padding: 20px;
+    background-color: #9C0C84;
+    /*box-shadow: 2px 0 5px rgba(0,0,0,0.1);*/
+}
+
+.dropbtn {
+    background-color: #9C0C84;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Copperplate";
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #800062;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    font-family: "Copperplate";
+    text-align: left;
+    font-size: 15px;
+}
+
+.dropdown-content a {
+    color: #9C0C84;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ffc600;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#content {
+    flex-grow: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    /*box-shadow: 0 4px 8px rgba(0,0,0,0.1);*/
+}
+
+h1 {
+    font-weight: bolder;
+    color: #9C0C84;
+    text-align: center;
+    font-size: 40px;
+    font-family: "Copperplate";
+}
+
+label {
+    font-weight: bold;
+    color: #333333;
+}
+
+input[type="radio"] {
+    margin-left: 10px;
+    background-color: #9C0C84;
+}
+
+input[type="submit"] {
+    background-color: #9C0C84;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #800062;
+}
+
+a {
+    color: #9C0C84;
+    text-decoration: none;
+}
+
+a.button-link {
+    background-color: #9C0C84;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-left: 72%;
+}
+
+a.button-link:hover {
+    background-color: #800062;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.dropbtn:nth-of-type(1) {
+    align-self: flex-start; /* Place the first button at the start */
+}
+
+.dropbtn:nth-of-type(2) {
+    align-self: center; /* Place the second button in the middle */
+}
+
+.dropbtn:nth-of-type(3) {
+    align-self: flex-end; /* Place the third button at the end */
+}
+
+select{
+    width: 65%;
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: "Copperplate";
+    font-size: medium;
+}
+
+
+
+

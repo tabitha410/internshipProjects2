@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Data Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="container">
+        <div id="menu">
+            <div class="dropdown">
+                <button class="dropbtn">Explore Student Data</button>
+                <div class="dropdown-content">
+                    <a href="/department">Distribution by Department</a>
+                    <a href="/level">Distribution by Level</a>
+                    <a href="/faculty">Distribution by Faculty</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Explore Radar Chart</button>
+                <div class="dropdown-content">
+                    <a href="/department_radar">Distribution by Department</a>
+                    <a href="/level_radar">Distribution by Level</a>
+                    <a href="/faculty_radar">Distribution by Faculty</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Explore Pie Charts</button>
+                <div id="pieDropdown" class="dropdown-content dropdown-content-up">
+                    <a href="/department_pie">Distribution by Department</a>
+                    <a href="/level_pie">Distribution by Level</a>
+                    <a href="/faculty_pie">Distribution by Faculty</a>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <h1>UNIVERSITY OF BENIN STUDENT DATA</h1>
+
+            {% if plot_url %}
+            <img src="data:image/png;base64,{{ plot_url }}" alt="Student Distribution Plot">
+            {% endif %}
+
+            {% if radar_chart_url %}
+            <img src="data:image/png;base64,{{ radar_chart_url }}" alt="Student Distribution Radar Chart" id="radar_chart">
+            {% endif %}
+
+            {% if pie_chart_url %}
+            <img src="data:image/png;base64,{{ pie_chart_url }}" alt="Student Distribution Pie Chart">
+            {% endif %}
+
+            <form action="/" method="post"><br><br>
+                <label for="faculty">Select Faculty:</label>
+                <select name="faculty" id="faculty">
+                    {% for faculty in faculties %}
+                        <option value="{{ faculty }}">{{ faculty }}</option>
+                    {% endfor %}
+                </select>
+                <input type="radio" id="bar" name="plot_type" value="bar" checked>
+                <label for="bar">Bar Chart</label>
+                <input type="radio" id="pie" name="plot_type" value="pie">
+                <label for="pie">Pie Chart</label>
+                <br><br>
+                <input type="submit" value="Generate Plot">
+                <a class="button-link" href="/">Go Back</a>
+            </form>
+
+            {% if error %}
+                <p>Error: {{ error }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
