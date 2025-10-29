@@ -1,0 +1,45 @@
+/* To make to it responsive for small screens */
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+    
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+  }
+    
+  .navbar-toggler {
+    margin-right: 1rem;
+  }
+}
+  
+.header {
+  background-color: #3b3b3b;
+  color: white;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-custom {
+  background-color: #00A6A6;
+}
+
+.navbar-custom a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-custom a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #333; 
+}
+/* */
+
+

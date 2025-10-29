@@ -1,0 +1,45 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background: #00A6A6;
+    background: -webkit-linear-gradient(to bottom right, #00C8C8, #00A6A6, #009393);
+    background: linear-gradient(to bottom right, #00C8C8, #00A6A6, #009393);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.gradient-custom {
+    /* Ensures the gradient covers the entire content area */
+    min-height: 100vh;
+}
+
+.container {
+    /* Stretches the container to fill the entire viewport height */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+}
+
+/* Custom radio button color */
+.custom-radio:checked {
+    background-color: #00A6A6;
+    border-color: #00A6A6;
+}
+
+/* Smaller input fields for better layout */
+.form-control-sm {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.card-registration .select-arrow {
+    top: 13px;
+}
