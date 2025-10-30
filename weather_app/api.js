@@ -38,7 +38,7 @@ export const getWeatherByLocation = async () => {
             ? `${town}, ${city}`
             : town || city;
          
-        const apikey = '1302403fb89a48f6977132043242207';
+        const apikey = 'YOUR_API_KEY_HERE';
         const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apikey}&q=${city}`;
 
         const response = await fetch(apiUrl);
@@ -72,7 +72,7 @@ const showAlert = (message) => {
 
 export const getWeather = async (city) => {
     try{
-        const apikey = '1302403fb89a48f6977132043242207';
+        const apikey = 'YOUR_API_KEY_HERE';
         const apiUrl  = `https://api.weatherapi.com/v1/current.json?key=${apikey}&q=${city}`;
         const response = await fetch(apiUrl);
         const data = await response.json();
@@ -100,7 +100,7 @@ export const getWeather = async (city) => {
 
 export const getForecast = async (city, type) => {
     try{
-        const apikey = '1302403fb89a48f6977132043242207';
+        const apikey = 'YOUR_API_KEY_HERE';
         let apiUrl;
 
         switch (type) {
