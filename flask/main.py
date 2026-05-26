@@ -12,9 +12,11 @@ from urllib.request import urlopen
 response = urlopen(url)
 data = json.loads(response.read())'''
 
-with open('C:\\Users\\DELL\\Downloads\\data.json', 'r') as file:
-    data = json.load(file)
+'''with open('C:\\Users\\DELL\\Downloads\\data.json', 'r') as file:
+    data = json.load(file)'''
 
+with open('data.json', 'r') as file:
+    data = json.load(file)
 # data = json.loads()
 
 students = data['students']
